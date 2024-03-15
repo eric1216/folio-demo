@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/pages.css">
+  <title>folio</title>
+</head>
+
+<body>
+  <div class="theme-panel">
+    <div class="theme-body">
+      <span>Change Theme</span>
+      <div class="btn-group">
+        <button data-toggle="light" class="switcher-btn active">Light</button>
+        <button data-toggle="dark" class="switcher-btn">Dark</button>
+      </div>
+      <button class="theme-tab">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+  </div>
+
+  <main class="site-wrapper">
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="brand-logo">
+          <a href="/">
+            <h2>folio.</h2>
+          </a>
+        </div>
+        <div class="navbar-nav">
+          <ul class="ul-defaults-none main-menu">
+            <li class="nav-item">Home</li>
+            <li class="nav-item" data-open="about">About Me</li>
+            <li class="nav-item" data-open="contact">Contact</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--Hero Section-->
+    <section class="hero-bg">
+      <div class="container">
+        <div class="hero-content">
+          <div class="code-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h2 class="header-lg">Code. Eat. Sleep.</h2>
+          <div class="sub-header">I create meaningful solutions for your brand and products.
+            <br>
+            Give your customers the best experience possible.
+          </div>
+          <div class="btn btn-primary round-pill">
+            <a href="#" data-open="contact">Let's talk now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="container search-container">
+        <label for="search">
+          <input autocomplete="off" id="search" type="text" class="search-input"
+            placeholder="Search...">
+          <i class="fas fa-search"></i>
+        </label>
+        <ul class="portfolio-filter-nav ul-defaults-none">
+          <li data-filter="all" class="filter-link active">All Work</li>
+          <li data-filter="web" class="filter-link">Web Development</li>
+          <li data-filter="app" class="filter-link">App Development</li>
+          <li data-filter="ui" class="filter-link">UI Design</li>
+        </ul>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </section>
+
+    <section class="reviews">
+      <div class="review-title">What People Say</div>
+      <h2 class="header-md">Trusted by Clients.</h2>
+      <div class="review-preview">
+        <img src="./assets/images/cube.png" alt="cube">
+      </div>
+
+      <div class="review-carousel">
+        <div class="review-item">
+          <div class="review-text">
+            #1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, optio autem nesciunt,
+            libero harum officiis blanditiis perferendis.
+          </div>
+          <div class="review-author">
+            <div class="avatar">
+              <img src="./assets/images/ava-1.jpg" alt="avatar">
+            </div>
+            <div class="details">
+              <div class="name">Joe Doe</div>
+              <div class="company">Skate World Wide</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-item">
+          <div class="review-text">
+            #2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, optio autem nesciunt,
+            libero harum officiis blanditiis perferendis.
+          </div>
+          <div class="review-author">
+            <div class="avatar">
+              <img src="./assets/images/ava-1.jpg" alt="avatar">
+            </div>
+            <div class="details">
+              <div class="name">Jane Doe</div>
+              <div class="company">Skate Nation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-item">
+          <div class="review-text">
+            #3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, optio autem nesciunt,
+            libero harum officiis blanditiis perferendis.
+          </div>
+          <div class="review-author">
+            <div class="avatar">
+              <img src="./assets/images/ava-1.jpg" alt="avatar">
+            </div>
+            <div class="details">
+              <div class="name">John Doe</div>
+              <div class="company">Skate Universe</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-item">
+          <div class="review-text">
+            #4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, optio autem nesciunt,
+            libero harum officiis blanditiis perferendis.
+          </div>
+          <div class="review-author">
+            <div class="avatar">
+              <img src="./assets/images/ava-1.jpg" alt="avatar">
+            </div>
+            <div class="details">
+              <div class="name">Jen Doe</div>
+              <div class="company">Skate Planet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-ctrl-container">
+        <button>
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <section id="modal-section">
+      <!-- About Page Modal -->
+      <div id="about" class="full-site-modal page-block" data-animation="zoomInOut">
+        <div class="container-fluid">
+          <header class="modal-header">
+            <h3>ABOUT PAGE</h3>
+            <i class="fas fa-times" data-close></i>
+          </header>
+          <div class="modal-body">
+            <div class="img-wrapper">
+              <img src="./assets/images/img4.jpg" alt="head shot">
+            </div>
+            <div class="about-text">
+              <h2 class="header-md">Eric</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <div class="contact-me-block">
+                <div>Email Me:</div>
+                <a href="mailto:example@email.com">email</a>
+              </div>
+            </div>
+          </div>
+          <div class="marquee">
+            <ul class="marquee-content">
+              <li><i class="fab fa-github"></i></li>
+              <li><i class="fab fa-codepen"></i></li>
+              <li><i class="fab fa-dev"></i></li>
+              <li><i class="fab fa-react"></i></li>
+              <li><i class="fab fa-vuejs"></i></li>
+              <li><i class="fab fa-angular"></i></li>
+              <li><i class="fab fa-node"></i></li>
+              <li><i class="fab fa-aws"></i></li>
+              <li><i class="fab fa-docker"></i></li>
+              <li><i class="fab fa-android"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Page Modals -->
+      <div id="contact" class="full-site-modal page-block" data-animation="zoomInOut">
+        <div class="container-fluid">
+          <header class="modal-header">
+            <h3>Contact PAGE</h3>
+            <i class="fas fa-times" data-close></i>
+          </header>
+          <div class="modal-body">
+            <div class="contact-text">
+              <h2 class="header-md">Eric</h2>
+              <div>Have a project or a question? Send me a message!</div>
+              <div>I will reply within 48 hours.</div>
+            </div>
+            <form class="folio-form">
+              <input class="form-control" name="name" type="text" placeholder="Name">
+              <input class="form-control" name="email" type="email" placeholder="Email">
+              <input class="form-control" name="subject" type="text" placeholder="Subject">
+              <textarea class="form-control" name="message" cols="30" rows="3"
+                placeholder="Write your message..."></textarea>
+              <input type="submit" value="Send" class="btn btn-primary round-pill">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popup Modals -->
+    </section>
+
+  </main>
+
+  <script src="js/portfolioCards.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
